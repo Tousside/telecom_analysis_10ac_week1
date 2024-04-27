@@ -240,7 +240,9 @@ def plot_count(df: pd.DataFrame, column: str, top: int) -> None:
     sns.countplot(data=df[df[column].isin(top_modalities)], x=column, order=top_modalities)
     plt.xticks(rotation=75, fontsize=14)
     plt.title(f'Distribution of {column}', size=20, fontweight='bold')
+    plt.savefig(f"../docs/{column}.png")
     plt.show()
+    
 
 
 
