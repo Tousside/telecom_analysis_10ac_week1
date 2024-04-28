@@ -6,4 +6,4 @@ RUN pip install -r requirements.txt
 
 WORKDIR . /app
 
-RUN mkdir /app/
+CMD [ "python3", "/app/src/task5.py" ]
